@@ -15,10 +15,10 @@
     <div class="logoalt">{{logoname}}</div>
 	<div class="center">
         <ul>
-            <li><a href="">{{list_one}}</a></li>
-            <li><a href="">{{list_two}}</a></li>
-            <li><a href="">{{list_three}}</a></li>
-            <li><a href="">{{list_four}}</a></li>
+            <li class="effect"><a href="">{{list_one}}</a></li>
+            <li class="effect"><a href="">{{list_two}}</a></li>
+            <li class="effect"><a href="">{{list_three}}</a></li>
+            <li class="effect"><a href="">{{list_four}}</a></li>
             <div v-model="usrandom"></div>
             <div v-for="item in items | filterBy usrandom in 'id'">
                 <div class="promotion">

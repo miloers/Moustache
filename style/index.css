@@ -32,7 +32,6 @@
                     height:9rem;
                     margin-top: -5rem;
                     margin-left:-5rem;
-                    
                     z-index: 99;
                 } 
          a{
@@ -45,11 +44,35 @@
              -ms-transition:1s ease-in-out;
              -o-transition:1s ease-in-out;
              font-family: "Lucida Grande", "Microsoft JhengHei", "Microsoft YaHei UI";
+             position: relative;
          }
-         a:hover{
-             color:black;
-             text-decoration: underline;
+
+         .effect a::after{
+            background: black;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 1px;
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+            -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+            -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+            transform: translateY(-12px);
+            -moz-transform: translateY(-12px);
+            -webkit-transform: translateY(-12px);
          }
+         
+        .effect a:hover::after,
+        .effect a:focus::after {
+            opacity: 1;
+            transform: translateY(-8px);
+            -moz-transform: translateY(-8px);
+            -webkit-transform: translateY(-8px);
+        }
+         
+         
         @font-face {
             font-family: "GlamorR";
             src: url("GlamorR.ttf");
@@ -67,4 +90,36 @@
         }
         .promotion:hover{
             color:black;
+    
         }
+
+    .wave{
+        width: 60px;height: 50px;
+        
+        position: relative;
+    }
+    .wave i{
+        width: 1px; height: 2px;position:absolute;
+        bottom: 0 ;background:#808080;
+    }
+    .wave i:nth-of-type(1){left: 0;}
+    .wave i:nth-of-type(2){left: 4px;}
+    .wave i:nth-of-type(3){left: 8px;}
+    .wave i:nth-of-type(4){left: 12px;}
+    
+    
+    .wave  i:nth-of-type(1){-webkit-animation:wave 0.6s linear infinite;animation:wave 0.6s linear infinite;}
+    .wave  i:nth-of-type(2){-webkit-animation:wave 0.8s linear infinite;animation:wave 0.8s linear infinite;}
+    .wave  i:nth-of-type(3){-webkit-animation:wave 0.7s linear infinite;animation:wave 0.7s linear infinite;}
+    .wave  i:nth-of-type(4){-webkit-animation:wave 0.5s linear infinite;animation:wave 0.5s linear infinite;}
+   
+    @-webkit-keyframes wave{
+        0%{height:6px}
+        50%{height: 15px}
+        100%{height: 8px}
+    }
+    @keyframes wave{
+        0%{height:6px}
+        50%{height: 15px}
+        100%{height: 8px}
+    }

@@ -8,7 +8,7 @@ define([
             usrandom:'',
             logoname:'Moustache',
             list_one:'WeiBo',
-            list_two:'吐槽博客',
+            list_two:'Github',
             list_three:'Coding',
             list_four:'关于',
             symbol:"****",
