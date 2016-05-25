@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Moustache</title>
+       <link href="favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="https://cdn.bootcss.com/require.js/2.1.22/require.js"  data-main="js/main"></script>
+    <script src="./js/canvas.js"></script>
+</head>
+<body>
+     <div class="logo">
+        <img src="img/moustache_64px_1137916_easyicon.net.png" alt="moustache">
+    </div>
+    <div class="logoalt">{{logoname}}</div>
+	<div class="center">
+        <ul>
+            <li><a href="">{{list_one}}</a></li>
+            <li><a href="">{{list_two}}</a></li>
+            <li><a href="">{{list_three}}</a></li>
+            <li><a href="">{{list_four}}</a></li>
+            <div v-model="usrandom"></div>
+            <div v-for="item in items | filterBy usrandom in 'id'">
+                <div class="promotion">
+                    {{item.msg}}  <span>{{symbol}}</span> 
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div class="outer">
+        <div class="liter" id="particle">
+            <section class="container"></section>
+        </div>
+    </div>
+</body>
+</html>

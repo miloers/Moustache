@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wave</title>
+</head>
+<style>
+    .wave{
+        width: 60px;height: 50px;
+        
+        position: relative;
+    }
+    .wave i{
+        width: 4px; height: 6px;position:absolute;
+        bottom: 0 ;background:black;
+    }
+    .wave i:nth-of-type(1){left: 0;}
+    .wave i:nth-of-type(2){left: 8px;}
+    .wave i:nth-of-type(3){left: 16px;}
+    .wave i:nth-of-type(4){left: 24px;}
+    .wave i:nth-of-type(5){left: 32px;}
+    .wave i:nth-of-type(6){left: 40px;}
+    .wave i:nth-of-type(7){left: 48px;}
+    
+    .wave  i:nth-of-type(1){-webkit-animation:wave 0.6s linear infinite;animation:wave 0.6s linear infinite;}
+    .wave  i:nth-of-type(2){-webkit-animation:wave 0.8s linear infinite;animation:wave 0.8s linear infinite;}
+    .wave  i:nth-of-type(3){-webkit-animation:wave 0.7s linear infinite;animation:wave 0.7s linear infinite;}
+    .wave  i:nth-of-type(4){-webkit-animation:wave 0.5s linear infinite;animation:wave 0.5s linear infinite;}
+    .wave  i:nth-of-type(5){-webkit-animation:wave 0.9s linear infinite;animation:wave 0.9s linear infinite;}
+    .wave  i:nth-of-type(6){-webkit-animation:wave 1.2s linear infinite;animation:wave 1.2s linear infinite;}
+    .wave  i:nth-of-type(7){-webkit-animation:wave 0.8s linear infinite;animation:wave 0.8s linear infinite;}
+    @-webkit-keyframes wave{
+        0%{height:8px}
+        50%{height: 32px}
+        100%{height: 12px}
+    }
+    @keyframes wave{
+        0%{height:8px}
+        50%{height: 32px}
+        100%{height: 12px}
+    }
+</style>
+<body>
+    <div class="wave">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+require.config({
+    paths:{
+       "vue":"http://cdn.bootcss.com/vue/1.0.17/vue",
+       "partic":"particleground.min",
+    }
+});
+require(['index'],function(index){
+    index.index;
+})
